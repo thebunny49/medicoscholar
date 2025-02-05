@@ -8,8 +8,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { Pagination, Navigation } from 'swiper/modules';
+import { Pagination, Navigation , Autoplay } from 'swiper/modules';
 
+import slide1 from "../assets/slide1.png";
 
 import abt1 from "../assets/abt-1.png";
 import abt2 from "../assets/abt-2.png";
@@ -25,6 +26,8 @@ import g4 from "../../public/images/g4.png"
 
 import storieVid from "../../public/images/storie video 1.mp4"
 import storieImg from "../../public/images/storyimg.png"
+import { IoLocationSharp, IoStarSharp } from "react-icons/io5";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 
 const Home = () => {
@@ -33,16 +36,18 @@ const Home = () => {
       <div className="mx-auto  " style={{ backgroundColor: "#031A5B" }}>
         <Header />
 
+        {/* <div className=""> */}
+          
 
         {/* Hero section  */}
         <div
-          className="container grid grid-cols-2
-         mx-auto px-5 gap-4 py-20"
+          className="container grid md:grid-cols-2 grid-cols-1
+         mx-auto  px-5 gap-4 md:py-20 py-10 2xl:px-20"
         >
           <div>
-            <h3 className="text-white">Dreaming of Studying Abroad?</h3>
-            <h1 className="text-white font-bold leading-tight">
-              Your Journey Starts Here!
+            <h3 className="text-white sm:text-3xl text-xl mb-4">Dreaming of Studying Abroad?</h3>
+            <h1 className="text-white sm:text-6xl text-4xl font-bold leading-tight ">
+              Your Journey Starts Here <span className="text-yellow-500">!</span>
             </h1>
           </div>
           <div className="flex flex-col gap-4">
@@ -52,29 +57,29 @@ const Home = () => {
               destination for student training and consultancy programs.
             </p>
             <a href="">
-              <button className="p-2 px-10 rounded-lg">Expore Programs</button>
+              <button className="p-2 text-white bg-yellow-500 px-10 rounded-lg">Expore Programs</button>
             </a>
           </div>
         </div>
 
         <div className="sec02">
           <div
-            className="container px-5  flex justify-between
-         mx-auto  "
+            className="container px-5  flex md:flex-row  flex-col justify-between
+         mx-auto 2xl:px-20  "
           >
-            <div className="me-10  flex justify-between flex-col">
-              <div className="text-white">
-                <div className="py-5 user-stats">
-                  <p className="fs-30 mb-0 font-bold">1000+</p>
-                  <p className="fs-16">Active Students</p>
+            <div className="md:me-10  flex justify-between flex-col md:gap-0 gap-10 ">
+              <div className="text-white flex md:flex-col md:gap-0 gap-3  ">
+                <div className="py-5 space-y-2 user-stats">
+                  <p className=" sm:text-3xl text-xl  mb-0 font-bold">1000+</p>
+                  <p className=" sm:text-sm text-[12px] ">Active <br className="md:hidden " /> Students</p>
                 </div>
-                <div className="py-5 user-stats">
-                  <p className="fs-30 mb-0 font-bold">50</p>
-                  <p className="fs-16">Best Universities</p>
+                <div className="py-5 space-y-2 user-stats">
+                  <p className=" sm:text-3xl text-xl mb-0 font-bold">50</p>
+                  <p className=" sm:text-sm text-[12px] ">Best <br className="md:hidden " /> Universities</p>
                 </div>
-                <div className="py-5 user-stats">
-                  <p className="fs-30 mb-0 font-bold">98%</p>
-                  <p className="fs-16">Parents Satisfaction</p>
+                <div className="py-5 space-y-2 user-stats">
+                  <p className=" sm:text-3xl text-xl mb-0 font-bold">98%</p>
+                  <p className=" sm:text-sm text-[12px] ">Parents <br className="md:hidden " /> Satisfaction</p>
                 </div>
               </div>
 
@@ -82,17 +87,17 @@ const Home = () => {
                 <div className="mb-2">
                   <img src="images/testimonial.svg" alt="" />
                 </div>
-                <small>Read Our</small>
-                <h3 style={{ fontWeight: 700 }}>Testimonials</h3>
+                <small className="text-white md:text-black">Read Our</small>
+                <h3 className="text-white md:text-black" style={{ fontWeight: 700 }}>Testimonials</h3>
               </div>
             </div>
-            <div className="w-140">
+            <div className="w-140 md:mb-0 md:mt-0  mb-10 mt-5">
               <img className="h-75" src="images/img1.png" alt="" />
             </div>
           </div>
         </div>
 
-
+         
 
       </div>
 
@@ -207,6 +212,105 @@ const Home = () => {
 
 
 
+        </div>
+      </div>
+
+      
+      {/* top univ */}
+      <div className="min-h-screen ">
+
+        <div className="flex justify-between md:mb-10   md:px-20 px-5">
+          <div className="space-y-2 font-bold">
+            <p className="text-blue-500">Top Universities</p>
+            <h1 className="text-4xl   " >Explore Our Top Universities</h1>
+          </div>
+          <FaArrowRightLong className="text-5xl text-blue-500 " />
+
+
+        </div>
+
+        <div className="lg:px-20 md:px-0 px-5">
+          <Swiper
+            slidesPerView={1} // Default for mobile
+            spaceBetween={20}
+            centeredSlides={true}
+            pagination={{ clickable: true }}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: true,
+            }}
+            loop={true}
+            modules={[Pagination, Autoplay]}
+            className="mySwiper1     "
+            breakpoints={{
+              640: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+          >
+            <SwiperSlide>
+              <div className=" my-10 max-w-[25rem]  border-2 border-gray-200 h-full mx-auto sliderShadow flex flex-col gap-3 p-4 rounded-xl">
+                <img src={slide1} alt="" className="rounded-xl w-full" />
+                <div className="flex  flex-wrap justify-between gap-2">
+                  <h2 className="text-xl font-bold ">LN Medical College</h2>
+                  <div className="bg-blue-800 py-1 px-2 rounded-lg flex items-center">
+                    <IoStarSharp className="text-yellow-400" />
+                    <p className="text-white" >4,5 (7,2k)</p>
+                  </div>
+                </div>
+                <div className="flex gap-1 text-lg items-center text-[#FFBC0E]">
+                  <IoLocationSharp className="" />
+                  <p>Bishkek</p>
+                </div>
+                <p className="hidin text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                <p className="text-gray-600 font-bold"><span className="text-black">$1.310</span>/Person</p>
+
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className=" my-10 max-w-[25rem]  border-2 border-gray-200 h-full mx-auto sliderShadow flex flex-col gap-3 p-4 rounded-xl">
+                <img src={slide1} alt="" className="rounded-xl w-full" />
+                <div className="flex  flex-wrap justify-between gap-2">
+                  <h2 className="text-xl font-bold ">LN Medical College</h2>
+                  <div className="bg-blue-800 py-1 px-2 rounded-lg flex items-center">
+                    <IoStarSharp className="text-yellow-400" />
+                    <p className="text-white" >4,5 (7,2k)</p>
+                  </div>
+                </div>
+                <div className="flex gap-1 text-lg items-center text-[#FFBC0E]">
+                  <IoLocationSharp className="" />
+                  <p>Bishkek</p>
+                </div>
+                <p className="hidin text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                <p className="text-gray-600 font-bold"><span className="text-black">$1.310</span>/Person</p>
+
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className=" my-10 max-w-[25rem]  border-2 border-gray-200 h-full mx-auto sliderShadow flex flex-col gap-3 p-4 rounded-xl">
+                <img src={slide1} alt="" className="rounded-xl w-full" />
+                <div className="flex  flex-wrap justify-between gap-2">
+                  <h2 className="text-xl font-bold ">LN Medical College</h2>
+                  <div className="bg-blue-800 py-1 px-2 rounded-lg flex items-center">
+                    <IoStarSharp className="text-yellow-400" />
+                    <p className="text-white" >4,5 (7,2k)</p>
+                  </div>
+                </div>
+                <div className="flex gap-1 text-lg items-center text-[#FFBC0E]">
+                  <IoLocationSharp className="" />
+                  <p>Bishkek</p>
+                </div>
+                <p className="hidin text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                <p className="text-gray-600 font-bold"><span className="text-black">$1.310</span>/Person</p>
+
+              </div>
+            </SwiperSlide>
+          
+            
+
+
+
+          </Swiper>
         </div>
       </div>
 
@@ -341,12 +445,11 @@ const Home = () => {
               </div>
 
             </SwiperSlide>
-          
-             
+
 
           </Swiper>
 
-          
+
 
           <div className=" md:my-0 my-7 flex gap-3 md:flex-col   md:absolute md:max-w-[20rem] md:left-[70%] md:top-[60%] md:transform md:-translate-x-[10%] md:-translate-y-[0%] z-10 " >
             <img
@@ -370,16 +473,16 @@ const Home = () => {
             Alumni Achievements
           </h1>
           <p className=" text-[#2B3039] text-base sm:text-3xl md:max-w-[32rem]  ">
-            Our graduates go on to achieve remarkable success in various fields. Read about their journeys and how Harvod helped shape their 
+            Our graduates go on to achieve remarkable success in various fields. Read about their journeys and how Harvod helped shape their
           </p>
         </div>
-        
+
 
       </div>
 
-      <div className="h-screen">
-        
-</div>
+      
+
+      
 
     </>
   );

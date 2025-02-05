@@ -11,3 +11,39 @@
     background-position: top;
     background-size: contain;
 }
+
+.sliderShadow{
+
+box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.20);
+}
+
+
+
+.mySwiper1 .custom-slide .hidin {
+  
+}
+
+.mySwiper1 .swiper-slide{
+    margin: auto 0px;
+     
+}
+
+.mySwiper1 .swiper-slide:not(.swiper-slide-active) .hidin {
+    display:none;
+    transition:all ease-in-out;
+    
+}
+.mySwiper1 .swiper-slide-active .hidin {
+    transition:all ease-in-out;
+    display:block;
+}
+
+
+@media (max-width: 768px) {
+    .sec02 {
+    background-image:none;
+}
+.mySwiper1 .swiper-pagination {
+    display: none !important;
+  }
+}

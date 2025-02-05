@@ -1,4 +1,5 @@
-import React from "react";
+
+import { IoCall } from "react-icons/io5";
 
 const Header = () => {
   return (
@@ -50,7 +51,7 @@ const Header = () => {
             </ul>
           </div>
           <div>
-            <a className="btn btn-ghost text-xl">
+            <a className=" text-xl">
               <img
                 src="images/logo.png"
                 // style={{ width: 50, height: 50 }}
@@ -82,8 +83,12 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn">Button</a>
+        <div className="navbar-end ">
+          <div className="text-blue-800 flex items-center gap-2  font-bold bg-white rounded-full px-5 py-2">
+
+          <IoCall />
+          <a className="  ">Contact</a>
+          </div>
         </div>
       </div>
     </>
