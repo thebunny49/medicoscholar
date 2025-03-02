@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { Pagination, Navigation , Autoplay } from 'swiper/modules';
+import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 
 import slide1 from "../assets/slide1.png";
 
@@ -19,16 +19,18 @@ import abt4 from "../assets/abt-4.png";
 import abt5 from "../assets/abt-5.png";
 import abt6 from "../assets/abt-6.png";
 
-import g1 from "../../public/images/g1.png"
-import g2 from "../../public/images/g2.png"
-import g3 from "../../public/images/g3.png"
-import g4 from "../../public/images/g4.png"
+import g1 from "/images/g1.png"
+import g2 from "/images/g2.png"
+import g3 from "/images/g3.png"
+import g4 from "/images/g4.png"
 
-import storieVid from "../../public/images/storie video 1.mp4"
-import storieImg from "../../public/images/storyimg.png"
+import storieVid from "/images/storie video 1.mp4"
+import storieImg from "/images/storyimg.png"
 import { IoLocationSharp, IoStarSharp } from "react-icons/io5";
 import { FaArrowRightLong } from "react-icons/fa6";
 
+import indiamap from "/images/indiamap.png"
+import Footer from "../directives/Footer";
 
 const Home = () => {
   return (
@@ -37,7 +39,7 @@ const Home = () => {
         <Header />
 
         {/* <div className=""> */}
-          
+
 
         {/* Hero section  */}
         <div
@@ -97,7 +99,7 @@ const Home = () => {
           </div>
         </div>
 
-         
+
 
       </div>
 
@@ -215,7 +217,7 @@ const Home = () => {
         </div>
       </div>
 
-      
+
       {/* top univ */}
       <div className="min-h-screen ">
 
@@ -232,7 +234,7 @@ const Home = () => {
         <div className="lg:px-20 md:px-0 px-5">
           <Swiper
             slidesPerView={1} // Default for mobile
-            spaceBetween={20}
+            spaceBetween={30}
             centeredSlides={true}
             pagination={{ clickable: true }}
             autoplay={{
@@ -305,8 +307,65 @@ const Home = () => {
 
               </div>
             </SwiperSlide>
-          
-            
+            <SwiperSlide>
+              <div className=" my-10 max-w-[25rem]  border-2 border-gray-200 h-full mx-auto sliderShadow flex flex-col gap-3 p-4 rounded-xl">
+                <img src={slide1} alt="" className="rounded-xl w-full" />
+                <div className="flex  flex-wrap justify-between gap-2">
+                  <h2 className="text-xl font-bold ">LN Medical College</h2>
+                  <div className="bg-blue-800 py-1 px-2 rounded-lg flex items-center">
+                    <IoStarSharp className="text-yellow-400" />
+                    <p className="text-white" >4,5 (7,2k)</p>
+                  </div>
+                </div>
+                <div className="flex gap-1 text-lg items-center text-[#FFBC0E]">
+                  <IoLocationSharp className="" />
+                  <p>Bishkek</p>
+                </div>
+                <p className="hidin text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                <p className="text-gray-600 font-bold"><span className="text-black">$1.310</span>/Person</p>
+
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className=" my-10 max-w-[25rem]  border-2 border-gray-200 h-full mx-auto sliderShadow flex flex-col gap-3 p-4 rounded-xl">
+                <img src={slide1} alt="" className="rounded-xl w-full" />
+                <div className="flex  flex-wrap justify-between gap-2">
+                  <h2 className="text-xl font-bold ">LN Medical College</h2>
+                  <div className="bg-blue-800 py-1 px-2 rounded-lg flex items-center">
+                    <IoStarSharp className="text-yellow-400" />
+                    <p className="text-white" >4,5 (7,2k)</p>
+                  </div>
+                </div>
+                <div className="flex gap-1 text-lg items-center text-[#FFBC0E]">
+                  <IoLocationSharp className="" />
+                  <p>Bishkek</p>
+                </div>
+                <p className="hidin text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                <p className="text-gray-600 font-bold"><span className="text-black">$1.310</span>/Person</p>
+
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className=" my-10 max-w-[25rem]  border-2 border-gray-200 h-full mx-auto sliderShadow flex flex-col gap-3 p-4 rounded-xl">
+                <img src={slide1} alt="" className="rounded-xl w-full" />
+                <div className="flex  flex-wrap justify-between gap-2">
+                  <h2 className="text-xl font-bold ">LN Medical College</h2>
+                  <div className="bg-blue-800 py-1 px-2 rounded-lg flex items-center">
+                    <IoStarSharp className="text-yellow-400" />
+                    <p className="text-white" >4,5 (7,2k)</p>
+                  </div>
+                </div>
+                <div className="flex gap-1 text-lg items-center text-[#FFBC0E]">
+                  <IoLocationSharp className="" />
+                  <p>Bishkek</p>
+                </div>
+                <p className="hidin text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                <p className="text-gray-600 font-bold"><span className="text-black">$1.310</span>/Person</p>
+
+              </div>
+            </SwiperSlide>
+
+
 
 
 
@@ -480,9 +539,128 @@ const Home = () => {
 
       </div>
 
-      
 
-      
+
+      {/* connect section  */}
+      <div className="flex md:flex-row flex-col  gap-10 lg:px-20 px-5    ">
+        <div className=" flex flex-col gap-5 md:w-1/2 w-full  ">
+          <h1 className=" leading-tight md:text-5xl text-4xl  max-w-fit font-bold ">
+            Connect with Us <br />
+            Across Five States!
+          </h1>
+          <p>
+            Whether you're seeking guidance for your college admission journey or have questions about our services, we're here to help! With offices in five cities, our expert team is ready to assist you at every step. Reach out to us and let’s take the first step toward your bright future together.
+          </p>
+          <img src={indiamap} className="max-w-[35rem]" alt="map" />
+        </div>
+
+
+        <div className=" flex justify-center items-center md:w-1/2 w-full">
+          <div className="flex items-center justify-center p-7 lg:p-10 w-fit bg-[#D9D9D9] rounded-sm">
+            <div className="mx-auto   max-w-[400px] ">
+              <h1 className=" text-gray-600 leading-tight md:text-4xl text-3xl  max-w-fit mb-4  ">
+                Connect  Us
+              </h1>
+
+              <form>
+
+                <div className="mb-4">
+                  <label htmlFor="name" className="mb-3 block text-sm font-medium text-[#07074D]">
+                    Full Name
+                  </label>
+                  <input type="text" name="name" id="name" placeholder="Full Name" className="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-4 text-sm font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                </div>
+
+                <div className="mb-4">
+                  <label htmlFor="phone" className="mb-3 block text-sm font-medium text-[#07074D]">
+                    Phone Number
+                  </label>
+                  <input type="text" name="phone" id="phone" placeholder="Enter your phone number" className="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-4 text-sm font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                </div>
+
+                <div className="mb-4">
+                  <label htmlFor="email" className="mb-3 block text-sm font-medium text-[#07074D]">
+                    Email Address
+                  </label>
+                  <input type="email" name="email" id="email" placeholder="Enter your email" className="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-4 text-sm font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                </div>
+
+                <div className="mb-4">
+                  <label className="mb-3 block text-sm font-medium text-[#07074D]">
+                    NEET QUALIFIED ?
+                  </label>
+                  <div className="flex items-center space-x-6">
+                    <div className="flex items-center">
+                      <input type="radio" name="radio1" id="radioButton1" className="h-5 w-5  " />
+                      <label htmlFor="radioButton1" className="pl-3 text-sm font-medium text-[#07074D]">
+                        Yes
+                      </label>
+                    </div>
+                    <div className="flex items-center">
+                      <input type="radio" name="radio1" id="radioButton2" className="h-5 w-5" />
+                      <label htmlFor="radioButton2" className="pl-3 text-sm font-medium text-[#07074D]">
+                        No
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+
+ 
+
+                <div className="mb-4 pt-3">
+                  <label className="mb-4 block text-sm font-semibold text-[#07074D] sm:text-xl">
+                    Address Details
+                  </label>
+                  <div className="-mx-3 flex flex-wrap">
+                    <div className="w-full px-3 sm:w-1/2">
+                      <div className="mb-4">
+                        <input type="text" name="area" id="area" placeholder="Enter area" className="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-4 text-sm font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                      </div>
+                    </div>
+                    <div className="w-full px-3 sm:w-1/2">
+                      <div className="mb-4">
+                        <input type="text" name="city" id="city" placeholder="Enter city" className="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-4 text-sm font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                      </div>
+                    </div>
+                    <div className="w-full px-3 sm:w-1/2">
+                      <div className="mb-4">
+                        <input type="text" name="state" id="state" placeholder="Enter state" className="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-4 text-sm font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                      </div>
+                    </div>
+                    <div className="w-full px-3 sm:w-1/2">
+                      <div className="mb-4">
+                        <input type="text" name="post-code" id="post-code" placeholder="Post Code" className="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-4 text-sm font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mb-4">
+                  <label htmlFor="Message" className="mb-3 block text-sm font-medium text-[#07074D]">
+                    Message
+                  </label>
+                  <textarea type="textarea" name="Message" id="Message" placeholder="Enter your Message" className="w-full   h-32 rounded-md border border-[#e0e0e0] bg-white py-2 px-4 text-sm font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                </div>
+
+                <div>
+                  <button className="hover:shadow-form w-full rounded-md bg-[#6A64F1] py-3 px-8 text-center text-sm font-semibold text-white outline-none">
+                    Book Appointment
+                  </button>
+                </div>
+
+
+              </form>
+            </div>
+          </div>
+
+        </div >
+
+
+      </div >
+        <Footer/>
+
+
 
     </>
   );
